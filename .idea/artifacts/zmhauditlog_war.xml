@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="zmhauditlog:war">
+    <output-path>$PROJECT_DIR$/../../DailyExercise/zmhauditlog/target</output-path>
+    <root id="archive" name="springaop.war">
+      <element id="artifact" artifact-name="zmhauditlog:war exploded" />
+    </root>
+  </artifact>
+</component>
