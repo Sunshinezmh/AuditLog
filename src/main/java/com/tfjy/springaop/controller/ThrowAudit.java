@@ -15,7 +15,8 @@ public class ThrowAudit extends Thread {
     @Override
     public void run() {
         Connection connection=JournalRecord.getConnection();
-        String sql="UPDATE tc_audit_journal SET is_exception=1 WHERE id=' "+journalId+"'";
+        String sql="UPDATE tc_audit_journal SET is_exception=1 WHERE id='"+journalId+"'";
+        System.out.println(sql);
         try {
             Statement statement=connection.createStatement();
             int i = statement.executeUpdate(sql);

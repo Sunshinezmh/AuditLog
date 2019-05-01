@@ -26,6 +26,8 @@ public class SpringController {
     @ResponseBody
     @RequestMapping(value="aop1")
     public String aop1(){
+        int i=5/0;
+        System.out.println(i);
         return "AOP";
     }
 

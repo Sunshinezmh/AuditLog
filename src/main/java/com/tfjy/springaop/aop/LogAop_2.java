@@ -60,9 +60,11 @@ public class LogAop_2 {
 		pjp.proceed();
 	}
 
-	@AfterThrowing("log()")
+	@AfterThrowing(value = "log()",throwing = "exception")
 	public void afterThrowingExec(JoinPoint joinPoint){
-		if (StringUtils.isEmpty(tag.get())) {
+		System.out.println(joinPoint);
+		System.out.println(tag.get());
+		if (!StringUtils.isEmpty(tag.get())) {
 			JournalRecord.throwJournal(tag.get());
 		}
 	}
